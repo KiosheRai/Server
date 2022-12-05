@@ -48,8 +48,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Complete(Guid id)
         {
-            var GuidId = id;
-            var data = await _dbContext.Notes.CompleteAsync(GuidId);
+            var data = await _dbContext.Notes.CompleteAsync(id);
             return Ok(data);
         }
 
